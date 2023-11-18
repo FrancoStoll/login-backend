@@ -29,8 +29,9 @@ app.use(cors(corsOptions));
 
 app.use("/api/usuarios", usuarioRoutes);
 
-const PORT = 4000;
 
-const server = app.listen(PORT, () => {
-  console.log("server up in port 4000");
+const PORT = process.env.PORT || 4000;
+
+const servidor = app.listen(PORT, () => {
+  console.log("servidor en el puerto 4000", PORT);
 });
